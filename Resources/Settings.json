@@ -1,0 +1,10 @@
+{
+    "IP": "0.0.0.0",
+    "Port": 7419,
+    "PlayCommand": "play1",
+    "ContinueCommand": "002#",
+    "PauseCommand": "001#",
+    "StopCommand": "006#",
+    "VolUpCommand": "004#",
+    "VolDownCommand": "005#"
+}
