@@ -44,8 +44,8 @@ public class UDPServer : MonoBehaviour
         //string MP4path = $"{MSettings.RootPath}/Resources/{settings.VideoPath}";
         //vp.url = MP4path;
         //vp.Prepare();
-        vp.Prepare();
 
+        vp.Prepare();
         server = new MEzUDPServer(ip, settings.Port);
         server.OnReceive += (ep, message) =>
         {
