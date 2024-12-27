@@ -51,6 +51,8 @@ public class UDPServer : MonoBehaviour
         {
             if (message == settings.PlayCommand)//播放
             {
+                MCoroutineManager.Instance.StopAllCoroutines();
+
                 vp.time = 0;
                 vp.Play();
 
@@ -71,16 +73,22 @@ public class UDPServer : MonoBehaviour
             }
             else if (message == settings.PauseCommand)//暂停
             {
+                MCoroutineManager.Instance.StopAllCoroutines();
+
                 if (!isPlaying) return;
                 if (!vp.isPaused) vp.Pause();
             }
             else if (message == settings.ContinueCommand)//暂停后的继续
             {
+                MCoroutineManager.Instance.StopAllCoroutines();
+
                 if (!isPlaying) return;
                 if (vp.isPaused) vp.Play();
             }
             else if (message == settings.StopCommand)//停止
             {
+                MCoroutineManager.Instance.StopAllCoroutines();
+
                 idleImg.SetActive(true);
                 MCoroutineManager.Instance.DelayNoRecord(() =>
                 {

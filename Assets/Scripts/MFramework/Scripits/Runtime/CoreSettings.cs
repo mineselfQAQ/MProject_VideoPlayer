@@ -36,7 +36,7 @@ namespace MFramework
         public Settings()
         {
             IP = "0.0.0.0";//»Œ“‚IP
-            Port = 8088;
+            Port = 7419;
 
             PlayCommand = "play1";
             ContinueCommand = "002#";
